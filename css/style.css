@@ -124,3 +124,65 @@ ul {
   color: var(--dark);
   cursor: pointer;
 }
+/* button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-primary{
+  background: var(--primary);       /* Teal background */
+  color: white;
+}
+.btn-primary:hover {
+  background: var(--primary-dark);  /* Darker teal on hover */
+  transform: translateY(-1px);      /* Slight lift effect */
+}
+.hero {
+  position: relative;
+  height: 85vh;
+  min-height: 560px;
+  background-image: url("../images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;                         /* Covers the entire hero */
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42 , 0.65) 0%,
+    rgba(15, 23, 42, 0.25) 60%,
+    transparent 100%
+  )
+}
+.hero-content {
+  position: relative;
+  z-index: 2;                       /* Puts text above the overlay */
+  color: white;
+  max-width: 580px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);  /* Responsive font size */
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 28px;
+  max-width: 480px;
+}
